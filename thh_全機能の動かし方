@@ -1,0 +1,38 @@
+***************Face detect port:50001
+
+conda activate cu12c_fd
+cd face_detecton
+python face_d_api_server.py
+
+or
+conda activate cu12c_fd
+cd anime_face_detection
+python face_d_api_server.py
+
+***************Anime Segmentation port:8007
+
+conda activate alla
+cd anime-segmentation
+python del_bkg_api_server.py
+
+***************Real-ESRGAN   port:8000
+
+conda activate alla
+cd Real-ESRGAN
+python realesr_api_server.py
+
+***************Talking-Head-Animeface-3   port:8001
+
+cd talking-head-anime-3-api
+conda activate alla
+python poser_api_v1_3_server.py
+
+***************test
+
+cd talking-head-anime-3-api
+conda activate alla
+python poser_generater_v1_3_test.py --filename kitchen_anime.png
+
+外部サーバの場合
+--thkと--upscrは違うサーバでもいいし、ローカルでもok(指定なし）
+python poser_generater_v1_3_test.py --filename kitchen_anime.png --thk 'http://192.168.5.71:8001' --upscr 'http://192.168.5.71:8008'
