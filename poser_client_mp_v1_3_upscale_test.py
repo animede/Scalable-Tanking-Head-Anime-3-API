@@ -7,12 +7,6 @@ from time import sleep
 import time
 from poser_client_mp_v1_3_class import TalkingHeadAnimefaceInterface
 
-import subprocess
-from subprocess import Popen
-from multiprocessing import Process
-import multiprocessing
-import threading
-
 from tkh_up_scale import upscale
 
 
