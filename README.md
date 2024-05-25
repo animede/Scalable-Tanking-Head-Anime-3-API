@@ -1,3 +1,74 @@
+# Scalable-Talking-Head-Anime-3-API
+
+## AIキャラを自分で作ろう　第2部　うキャラを動かす
+
+環境構築は、環境構築　に記載しています。ここで構築した環境は以下の全てのリポジトリのアプリが動きます。
+
+anime_face_detection
+https://github.com/animede/anime_face_detection
+
+anime-segmentation
+https://github.com/animede/Anime-Segmentation-API
+
+Real-ESRGAN
+https://github.com/animede/real-ESRGAN-API
+
+## 動かし方
+
+### ***************Face detect port:50001
+
+source tkh/bin/activate
+
+cd anime_face_detection
+
+python face_d_api_server.py
+
+### ***************Anime Segmentation port:8007
+
+source tkh/bin/activate
+
+cd anime-segmentation
+
+python del_bkg_api_server.py
+
+### ***************Real-ESRGAN   port:8000
+
+source tkh/bin/activate
+
+cd Real-ESRGAN
+
+python realesr_api_server.py
+
+### ***************Talking-Head-Animeface-3   port:8001
+
+source tkh/bin/activate
+
+cd talking-head-anime-3-api
+
+python poser_api_v1_3_server.py
+
+
+### ***************test
+
+source tkh/bin/activate
+
+cd talking-head-anime-3-api
+
+python poser_generater_v1_3_test.py --filename kitchen_anime.png
+
+
+## 外部サーバの場合
+--thkと--upscrは違うサーバでもいいし、ローカルでもok(指定なし）
+
+例）
+
+python poser_generater_v1_3_test.py --filename kitchen_anime.png --thk 'http://192.168.5.71:8001' --upscr 'http://192.168.5.71:8008'
+
+
+
+
+   
+# オリジナルのREADMEです
 # Demo Code for "Talking Head(?) Anime from A Single Image 3: Now the Body Too"
 
 This repository contains demo programs for the [Talking Head(?) Anime from a Single Image 3: Now the Body Too](https://pkhungurn.github.io/talking-head-anime-3/index.html) project. As the name implies, the project allows you to animate anime characters, and you only need a single image of that character to do so. There are two demo programs:
