@@ -2,7 +2,19 @@
 
 ## AIキャラを自分で作ろう　第2部　うキャラを動かす
 
-環境構築は、環境構築　に記載しています。ここで構築した環境は以下の全てのリポジトリのアプリが動きます。
+環境構築は、環境構築　に記載しています。
+
+### 参考
+
+tkh作成後　リポジトリから　requirements.txt　をコピーします
+```
+python3.11 -m venv tkh
+source tkh/bin/activate
+cd tkh
+pip install -r requirements.txt
+```
+
+ここで構築した環境は以下の全てのリポジトリのアプリが動きます。
 
 anime_face_detection
 https://github.com/animede/anime_face_detection
